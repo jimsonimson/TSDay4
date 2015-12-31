@@ -9,6 +9,23 @@
         <link rel="stylesheet" href="site.css">
     </head>
     <body>
+        <div class="well">
+            <form class="form-inline" onsubmit="app.createVehicle(event)">
+                <input class="form-control" type="text" id="inputHP" placeholder="horsepower">
+                <input class="form-control" type="text" id="inputNumSeats" placeholder="number of seats">
+                <input class="form-control" type="text" id="inputManu" placeholder="manufacturer">
+                <select class="form-control" id="inputType" onchange="app.selectType(this)" name="">
+                    <option value="Car">Car</option>
+                    <option value="Boat">Boat</option>
+                    <option value="Motorcycle">Motorcycle</option>
+                </select>
+                <span id="secondaryPropInput">
+                    <input class="form-control" type="text" id="inputSecondary" placeholder="category..." value="">
+                </span>
+                <button type="button" class="btn btn-info" name="button">Submit</button>
+            </form>
+        </div>
+
         <div id="vehicle-results"></div>
     <script src="app.js" charset="utf-8"></script>
     </body>

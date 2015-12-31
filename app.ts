@@ -64,6 +64,21 @@ namespace app {
         `);
         document.getElementById('vehicle-results').innerHTML = elemString
     }
+
+    export function selectType(select: HTMLSelectElement) {
+        // alert((<HTMLInputElement>document.getElementById('inputType')).value); //tests if its working
+        let placeholder: string;
+        if (select.value === "Car") placeholder = "Category...";
+        if (select.value === "Boat") placeholder = "NUmber of Engines...";
+        if (select.value === "Motorcycle") placeholder = "Does it look cool? (yes or no)";
+        document.getElementById('secondaryPropInput').innerHTML = `<input class="form-control" type="text" id="inputSecondary" placeholder="${placeholder}"/>`
+    }
+
+    export function createVehicle(event: Event) {
+        event.preventDefault();
+        console.log("Create Vehicle");
+    }
+
     //call functions
     displayVehicles();
-}
+} //end of app namespace

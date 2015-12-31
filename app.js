@@ -71,7 +71,20 @@ var app;
     app.selectType = selectType;
     function createVehicle(event) {
         event.preventDefault();
-        console.log("Create Vehicle");
+        var horsepower = $('#inputHP').val();
+        var numSeats = $('#inputNumSeats').val();
+        var manufacturer = $('#inputManu').val();
+        var type = $('#inputType').val();
+        var secondary = $('#inputSecondary').val();
+        var vehicle;
+        if (type === 'Car')
+            vehicle = new app.classes.Car(horsepower, numSeats, manufacturer, secondary);
+        if (type === 'Boat')
+            vehicle = new app.classes.Boat(horsepower, numSeats, manufacturer, secondary);
+        if (type === 'Motorcycle')
+            vehicle = new app.classes.Motorcycle(horsepower, numSeats, manufacturer, secondary);
+        app.vehicles.push(vehicle);
+        displayVehicles();
     }
     app.createVehicle = createVehicle;
     displayVehicles();

@@ -22,7 +22,9 @@
     "compileOnSave": true,
     "buildOnSave": false,
     "files": [
-        "app.ts"
+        "app.ts",
+        "typings/jquery/jquery.d.ts",
+        "typings/tsd.d.ts"
     ],
     "atom": {
         "rewriteTsconfig": true

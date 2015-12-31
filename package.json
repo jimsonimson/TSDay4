@@ -1,0 +1,22 @@
+{
+  "name": "day4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimsonimson/TSDay4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimsonimson/TSDay4/issues"
+  },
+  "homepage": "https://github.com/jimsonimson/TSDay4#readme",
+  "dependencies": {
+    "jquery": "^2.1.4"
+  }
+}
